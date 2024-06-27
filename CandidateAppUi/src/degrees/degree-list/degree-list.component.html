@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="card card-body">
+    <div class="row">
+      <div class="d-flex justify-content-between">
+        <h5>Degrees View</h5>
+        <a href="#" routerLink="/degrees/degree/0" class="btn btn-primary mb-2">
+          Add
+        </a>
+      </div>
+      <div class="col-12 mt-2">
+        <div class="list-group">
+          <ng-container *ngFor="let degree of degrees$ | async">
+            <div routerLink="/degrees/degree/{{degree.id}}" class="d-flex justify-content-between align-items-center mb-2 list-group-item list-group-item-action">
+              <span class="fw-bold">{{degree.name}}</span>
+                
+            
+              <button (click)="delete(degree.id)" class="btn btn-danger btn-sm ml-2">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>

@@ -1,0 +1,80 @@
+@CandidateApp_HostAddress = http://localhost:5155
+### Get all candidates
+GET  http://localhost:5155/Candidates
+
+### Get a specific candidate by ID
+GET http://localhost:5155/Candidates/1
+
+### Create a new candidate
+POST http://localhost:5155/Candidates
+Content-Type: application/json
+
+{
+  "id": 1,
+  "creationTime": "2024-06-24T06:44:48.982Z",
+  "lastname": "test",
+  "firstname": "test",
+  "email": "user@example.com",
+  "mobile": 0,
+  "cvBlob": "string",
+  "degrees": [
+    {
+      "id": 0,
+      "creationTime": "2024-06-24T06:44:48.983Z",
+      "name": "string"
+    }
+  ]
+}
+
+### Update a candidate
+PUT  http://localhost:5155/Candidates
+Content-Type: application/json
+
+{
+{
+  "id": 1,
+  "creationTime": "2024-06-24T06:44:48.982Z",
+  "lastname": "test4",
+  "firstname": "test",
+  "email": "user@example.com",
+  "mobile": 0,
+  "cvBlob": "string",
+  "degrees": [
+    {
+      "id": 0,
+      "creationTime": "2024-06-24T06:44:48.983Z",
+      "name": "string"
+    }
+  ]
+}
+
+### Delete a candidate
+DELETE http://localhost:5155/Candidates/1
+
+      ### Get all degrees
+GET  http://localhost:5155/Degrees
+
+### Get a specific degree by ID
+GET  http://localhost:5155/Degrees/1
+
+### Create a new degree
+POST  http://localhost:5155/Degrees
+Content-Type: application/json
+
+{
+  "id": 1,
+  "creationTime": "2024-06-27T06:49:29.189Z",
+  "name": "string"
+}
+### Update a degree
+PUT  http://localhost:5155/Degrees
+Content-Type: application/json
+
+{
+  "id": 1,
+  "creationTime": "2024-06-27T06:49:29.189Z",
+  "name": "string"
+}
+
+### Delete a degree
+DELETE  http://localhost:5155/Degrees/1

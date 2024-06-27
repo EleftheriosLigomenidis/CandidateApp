@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card mt-5">
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <h5 class="card-title">Degree Form</h5>
+        <a href="#" class="btn btn-outline-secondary"  routerLink="/degrees/list">Back</a>
+      </div>
+      <form [formGroup]="degreeForm" class="form-row" (ngSubmit)="onSubmit()">
+        <div class="mb-3 col" >
+          <label for="name" class="form-label">Name</label>
+          <input id="name" formControlName="name" type="text" class="form-control" [ngClass]="{'is-invalid': degreeForm.get('name')?.invalid && degreeForm.get('name')?.touched}">
+          <div *ngIf="degreeForm.get('name')?.invalid && degreeForm.get('name')?.touched" class="invalid-feedback">
+            Name is required.
+          </div>
+          <button type="submit" class="btn btn-primary mt-2" [disabled]="degreeForm.invalid">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>

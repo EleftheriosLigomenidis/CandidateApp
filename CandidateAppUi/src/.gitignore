@@ -1,0 +1,17 @@
+# Exclude Visual Studio Code settings directory
+.vscode/
+
+# Exclude Node.js specific files and directories
+node_modules/
+npm-debug.log
+
+# Exclude Angular CLI configuration file
+angular.json
+
+# Exclude TypeScript build artifacts
+dist/
+
+# Exclude IDE and OS specific files
+.idea/
+.DS_Store
+Thumbs.db
